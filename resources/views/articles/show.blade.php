@@ -1,10 +1,22 @@
 @extends('layouts.app')
-
+@section('title', $article->title)
 @section('content')
 <div class="container">
     <h1>{{ $article->title }}</h1>
-    <p>ID: {{ $article->id }}</p>
-    <p>{{ $article->content }}</p>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <td>{{ $article->id }}</td>
+        </tr>
+        <tr>
+            <th>Title</th>
+            <td>{{ $article->title }}</td>
+        </tr>
+        <tr>
+            <th>Content</th>
+            <td>{{ $article->content }}</td>
+        </tr>
+    </table>
     <a href="{{ route('articles.index') }}" class="btn btn-primary">Back to Articles</a>
 </div>
 @endsection
