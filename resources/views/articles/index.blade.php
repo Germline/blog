@@ -28,7 +28,7 @@
                     <td>{{$article->updated_at}}</td>
                     <td>
                         <div class="btn-group">
-                            <a class="btn btn-info">View</a>
+                            <a class="btn btn-info" href="{{ route('articles.show', ['article' => $article]) }}">View</a>
                             <a class="btn btn-warning" href="{{route('articles.edit', ['article' => $article])}}">Edit</a>
                             <button form="delete-{{$article->id}}" class="btn btn-danger">Delete</button>
                         </div>
