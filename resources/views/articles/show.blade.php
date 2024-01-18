@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('partials.layout')
 @section('title', $article->title)
 @section('content')
 <div class="container">
@@ -14,7 +14,7 @@
         </tr>
         <tr>
             <th>Content</th>
-            <td>{{ $article->content }}</td>
+            <td>{{ $article->body }}</td>
         </tr>
     </table>
     <a href="{{ route('articles.index') }}" class="btn btn-primary">Back to Articles</a>
