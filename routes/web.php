@@ -28,6 +28,7 @@ Route::get('/about', [PublicController::class, 'about'])->name('about');
 // Route::get('/admin/articles/{article}/edit', [ArticleController::class, 'edit'])->name('articles.edit');
 // Route::put('/admin/articles/{article}', [ArticleController::class, 'update'])->name('articles.update');
 // Route::delete('/admin/articles/{article}', [ArticleController::class, 'destroy'])->name('articles.destroy');
+Route::get('/articles/{slug}', 'ArticleController@show')->name('articles.show');
 
 Route::resource('admin/articles', ArticleController::class);
 
